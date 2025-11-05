@@ -458,6 +458,10 @@
 
                     <!-- User Type Selection -->
                     <div class="user-type-tabs">
+                        <button class="user-type-tab active" data-type="victim" onclick="selectUserType('victim')">
+                            <span class="tab-icon icon-alert"></span>
+                            <span>Victim</span>
+                        </button>
                         <button class="user-type-tab" data-type="volunteer" onclick="selectUserType('volunteer')">
                             <span class="tab-icon icon-heart"></span>
                             <span>Volunteer</span>
@@ -469,7 +473,13 @@
                     </div>
 
                     <!-- User Type Info -->
-                   
+                    <div class="user-type-info" id="userTypeInfo">
+                        <div class="info-header victim">
+                            <span class="icon-alert"></span>
+                            <h3>I Need Help</h3>
+                        </div>
+                        <p class="info-description">Request assistance during crisis</p>
+                    </div>
 
                     <!-- Login Form -->
                     <form id="loginForm" onsubmit="handleLogin(event)">
@@ -580,24 +590,6 @@
                 email: email,
                 password: '***hidden***'
             });
-            
-            // Here you would normally send the data to your backend
-            alert(`Login as ${currentUserType}\nEmail: ${email}\n\nThis is a demo. Backend authentication will be implemented later.`);
-            
-            // In production, you would do:
-            // fetch('/api/login', {
-            //     method: 'POST',
-            //     headers: { 'Content-Type': 'application/json' },
-            //     body: JSON.stringify({ userType: currentUserType, email, password })
-            // })
-            // .then(response => response.json())
-            // .then(data => {
-            //     if (data.success) {
-            //         window.location.href = '/dashboard';
-            //     } else {
-            //         alert('Login failed: ' + data.message);
-            //     }
-            // });
         }
 
         // Form validation enhancement
