@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CrisisConnect-Helping People in Crisis</title>
+    <title>CrisisConnect - Helping People in Crisis</title>
 </head>
 <link rel="stylesheet" href="style.css">
 <link rel="shortcut icon" href="assets/help.png" type="image/x-icon">
@@ -16,9 +16,12 @@
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#volunteer">Volunteer</a></li>
+                
+                <li><a href="signup.html" class="nav-button secondary">Join as a Volunteer</a></li> 
+                
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="##" class="nav-button">Get Help</a></li>
+                
+                <li><a href="#help-request" class="nav-button primary">Get Help Now</a></li> 
             </ul>
         </nav>
     </header>
@@ -27,11 +30,11 @@
         <section id="hero" class="hero-section">
             <h1>Welcome to CrisisConnect</h1>
             <p>Connect with trained professionals 24/7. Your safety is our priority.</p>
-            <a href="#" class="cta-button primary">Call Our HotLine (123) 456-7890</a>
+            <a href="#help-request" class="cta-button primary">Submit a Help Request</a>
         </section>
 
         <section id="about" class="about-section">
-           <h2>A Safe Place to Turn</h2>
+            <h2>A Safe Place to Turn</h2>
             <p class="mission-statement">Our mission is to provide accessible, compassionate support to anyone facing a mental health or personal crisis.</p>
             <blockquote class="testimonial">
                 "CrisisConnect made me feel heard. It was the help I needed, right when I needed it."
@@ -57,94 +60,97 @@
             </div>
         </section>
 
-        <section id="volunteer" class="volunteer-section">
-            <div class="volunteer-content">
-                <div class="volunteer-info">
-                    <h2>Make a Difference</h2>
-                    <p>Join our team of dedicated volunteers and help us support people in crisis. Whether you can offer a few hours a week or more, your contribution matters.</p>
-                    <ul class="volunteer-benefits">
-                        <li>Comprehensive training provided</li>
-                        <li>Flexible scheduling options</li>
-                        <li>Make a real impact in your community</li>
-                        <li>Join a supportive team of helpers</li>
+        <hr>
+
+        <section id="help-request" class="help-request-section">
+            <div class="help-request-container">
+                <div class="help-request-info">
+                    <h2>Immediate Assistance Needed?</h2>
+                    <p>Use this form to send an urgent help request directly to our dispatch team. **Please note: For medical emergencies, call your local emergency number (e.g., 108 or 112 in India) first.**</p>
+                    <ul class="help-icons">
+                        <li>🚑 Medical Aid</li>
+                        <li>🍲 Food & Water</li>
+                        <li>🏠 Shelter</li>
+                        <li>🤝 Other Support</li>
                     </ul>
                 </div>
-                <div class="volunteer-form-container">
-                    <h3>Volunteer Sign Up</h3>
-                    <form class="volunteer-form" id="volunteerForm">
+                <div class="help-request-form-container">
+                    <h3>Victim Help Request</h3>
+                    <form class="help-request-form" id="helpRequestForm">
                         <div class="form-group">
-                            <label for="fullName">Full Name *</label>
-                            <input type="text" id="fullName" name="fullName" required>
+                            <label for="victimName">Full Name *</label>
+                            <input type="text" id="victimName" name="victimName" required>
                         </div>
                         <div class="form-group">
-                            <label for="email">Email Address *</label>
-                            <input type="email" id="email" name="email" required>
+                            <label for="victimContact">Phone Number *</label>
+                            <input type="tel" id="victimContact" name="victimContact" required>
                         </div>
                         <div class="form-group">
-                            <label for="phone">Phone Number *</label>
-                            <input type="tel" id="phone" name="phone" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="availability">Availability *</label>
-                            <select id="availability" name="availability" required>
-                                <option value="">Select your availability</option>
-                                <option value="weekdays">Weekdays</option>
-                                <option value="weekends">Weekends</option>
-                                <option value="evenings">Evenings</option>
-                                <option value="flexible">Flexible</option>
+                            <label for="helpType">Type of Help Needed *</label>
+                            <select id="helpType" name="helpType" required>
+                                <option value="">Select Aid Type</option>
+                                <option value="medical">Medical Aid</option>
+                                <option value="shelter">Shelter/Evacuation</option>
+                                <option value="food">Food/Water</option>
+                                <option value="financial">Financial Support</option>
+                                <option value="other">Other/Urgent Contact</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="experience">Relevant Experience</label>
-                            <textarea id="experience" name="experience" rows="4" placeholder="Tell us about any relevant experience or skills..."></textarea>
+                            <label for="currentLocation">Current Location/Address *</label>
+                            <textarea id="currentLocation" name="currentLocation" rows="3" placeholder="Provide a detailed address or landmark for rescuers." required></textarea>
                         </div>
-                        <div class="form-group checkbox-group">
-                            <input type="checkbox" id="terms" name="terms" required>
-                            <label for="terms">I agree to background check and training requirements *</label>
+                        <div class="form-group">
+                            <label for="additionalNotes">Additional Notes (Situation Details)</label>
+                            <textarea id="additionalNotes" name="additionalNotes" rows="4" placeholder="Briefly describe your situation, number of people, and urgency."></textarea>
                         </div>
-                        <button type="submit" class="cta-button primary">Submit Application</button>
+                        <button type="submit" class="cta-button primary large">Submit Help Request</button>
                     </form>
                 </div>
             </div>
         </section>
-
+        
+        <hr>
+        
         <section id="contact" class="cta-bottom-section">
             <h2>Don't Wait. Reach Out Today</h2>
             <p>If you or someone you know is in crisis, please don't hesitate to contact us. We're here to help.</p>
-            <a href="#" class="cta-button primary large">Get Help Now</a>
+            <a href="#help-request" class="cta-button primary large">Get Help Now</a>
         </section>
     </main>
 
     <footer class="main-footer">
         <p>&copy; 2025 CrisisConnect. All Rights Reserved. | <a href="#">Privacy Policy</a></p>
         <div class="social-links">
-            <a href="#" class="social-icon"><img src="assets/social/icons8-facebook-logo-50.png" alt="Facebook"></a>
-            <a href="#" class="social-icon"><img src="assets/social/twitter.png" alt="X"></a>
-            <a href="#" class="social-icon"><img src="assets/social/instagram.png" alt="Instagram"></a>
+            <a href="#" class="social-icon"></a>
+            <a href="#" class="social-icon"></a>
+            <a href="#" class="social-icon"></a>
         </div>
     </footer>
 
     <script>
-        // Simple form validation and submission handler
-        document.getElementById('volunteerForm').addEventListener('submit', function(e) {
+        // The original volunteerForm handler is removed.
+        
+        // --- Victim Help Request Form Handler ---
+        document.getElementById('helpRequestForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            
-            // Get form values
-            const formData = {
-                fullName: document.getElementById('fullName').value,
-                email: document.getElementById('email').value,
-                phone: document.getElementById('phone').value,
-                availability: document.getElementById('availability').value,
-                experience: document.getElementById('experience').value
+
+            const requestData = {
+                name: document.getElementById('victimName').value,
+                contact: document.getElementById('victimContact').value,
+                aidType: document.getElementById('helpType').value,
+                location: document.getElementById('currentLocation').value,
+                notes: document.getElementById('additionalNotes').value
             };
-            
-            // Display success message
-            alert('Thank you for your interest in volunteering! We will contact you soon at ' + formData.email);
-            
-            // Reset form
+
+            // In a real application, you would send this data to a secure server API here.
+            console.log('Victim Request Submitted:', requestData);
+
+            alert('✅ **Urgent Request Submitted!**\n\nYour request for ' + requestData.aidType.toUpperCase() + ' has been received. Our dispatch team is working to verify your location and assign a responder. Please keep your phone lines open.');
+
+            // Clear the form fields after submission
             this.reset();
         });
     </script>
-
 </body>
 </html>
