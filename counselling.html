@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrisisConnect | Counseling Support</title>
+    <link rel="stylesheet" href="lol.css">
+    <link rel="shortcut icon" href="assets/help.png" type="image/x-icon">
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo">
+            <img src="assets/logo.png" height="200rem" width="200rem" alt="CrisisConnect Logo">
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="#counselling">Counseling</a></li>
+                <li><a href="index.html#volunteer">Volunteer</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="index.html#gethelp" class="nav-button">Get Help</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section id="counselling" class="hero-section">
+            <h1>Professional Counseling Support</h1>
+            <p>Your mental health matters. Connect with certified professionals for confidential one-on-one counseling sessions, anytime.</p>
+            <a href="#book-session" class="cta-button primary">Book a Session Now</a>
+        </section>
+
+        <!-- About Counseling -->
+        <section class="about-section">
+            <h2>Why Choose CrisisConnect Counseling?</h2>
+            <p class="mission-statement">
+                Our team of licensed mental health professionals offers compassionate, personalized care to help you navigate tough moments. We believe that reaching out for help is a sign of strength, not weakness.
+            </p>
+            <blockquote class="testimonial">
+                "The counseling sessions were life-changing. My counselor truly listened and guided me without judgment."
+                <cite>- Anonymous Client</cite>
+            </blockquote>
+        </section>
+
+        <!-- Services Offered -->
+        <section class="services-section">
+            <h2>Our Counseling Services</h2>
+            <div class="service-cards">
+                <div class="card">
+                    <h3>Individual Therapy</h3>
+                    <p>Personalized sessions with licensed therapists to address anxiety, depression, stress, and more.</p>
+                </div>
+                <div class="card">
+                    <h3>Family & Relationship Support</h3>
+                    <p>Guided sessions to rebuild trust, communication, and connection within families and relationships.</p>
+                </div>
+                <div class="card">
+                    <h3>Career & Student Counseling</h3>
+                    <p>Support for academic stress, burnout, or career uncertainty with experienced counselors.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking Form -->
+        <section id="book-session" class="volunteer-section">
+            <div class="volunteer-content">
+                <div class="volunteer-info">
+                    <h2>Book Your Counseling Session</h2>
+                    <p>Fill out the form to schedule a confidential counseling session. Our team will reach out within 24 hours to confirm your appointment.</p>
+                    <ul class="volunteer-benefits">
+                        <li>Confidential and Secure Sessions</li>
+                        <li>Certified Mental Health Professionals</li>
+                        <li>Online and In-person Options</li>
+                        <li>24/7 Availability</li>
+                    </ul>
+                </div>
+                <div class="volunteer-form-container">
+                    <h3>Session Booking Form</h3>
+                    <form class="volunteer-form" id="counselForm">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="type">Type of Counseling *</label>
+                            <select id="type" name="type" required>
+                                <option value="">Select type</option>
+                                <option value="individual">Individual Therapy</option>
+                                <option value="family">Family / Relationship</option>
+                                <option value="career">Career / Student</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Describe Your Concern (optional)</label>
+                            <textarea id="message" name="message" rows="4"></textarea>
+                        </div>
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="consent" name="consent" required>
+                            <label for="consent">I consent to be contacted by a licensed counselor *</label>
+                        </div>
+                        <button type="submit" class="cta-button primary">Book Session</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="cta-bottom-section">
+            <h2>Ready to Talk?</h2>
+            <p>Don’t carry it alone. Our counselors are here to help you take the first step toward healing.</p>
+            <a href="index.html#gethelp" class="cta-button primary large">Reach Out Now</a>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 CrisisConnect. All Rights Reserved. | <a href="#">Privacy Policy</a></p>
+        <div class="social-links">
+            <a href="#" class="social-icon"><img src="assets/social/icons8-facebook-logo-50.png" alt="Facebook"></a>
+            <a href="#" class="social-icon"><img src="assets/social/twitter.png" alt="X"></a>
+            <a href="#" class="social-icon"><img src="assets/social/instagram.png" alt="Instagram"></a>
+        </div>
+    </footer>
+
+    <script>
+        // Form handling for counseling page
+        document.getElementById('counselForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                type: document.getElementById('type').value,
+                message: document.getElementById('message').value
+            };
+
+            alert(`Thank you, ${formData.name}! Your counseling request has been received. We'll contact you soon at ${formData.email}.`);
+            this.reset();
+        });
+    </script>
+</body>
+</html>
